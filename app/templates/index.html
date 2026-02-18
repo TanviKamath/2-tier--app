@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Two-Tier App</title>
+    <style>
+        body { font-family: sans-serif; margin: 50px; background: #f4f4f4; }
+        .container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        input { padding: 10px; width: 70%; }
+        button { padding: 10px; background: #28a745; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Two-Tier App: Flask + MySQL</h1>
+        <form action="/add" method="POST">
+            <input type="text" name="message" placeholder="Type a message to save in DB..." required>
+            <button type="submit">Save to MySQL</button>
+        </form>
+        <hr>
+        <h3>Stored Messages:</h3>
+        <ul>
+            {% for msg in messages %}
+                <li>{{ msg[0] }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
