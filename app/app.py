@@ -24,7 +24,7 @@ def get_db_connection():
 
 def init_db():
     retries = 10
-    while retries > 0:
+    while retries > 0
         try:
             conn = mysql.connector.connect(
                 host="db",
